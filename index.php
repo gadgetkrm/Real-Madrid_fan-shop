@@ -32,7 +32,7 @@
 		<div class="collapse navbar-collapse col-2 mr-2" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Log in/Register</a>
+					<a class="nav-link" href="/login.php">Log in/Register</a>
 				</li>
 			</ul>
 		</div>		
