@@ -14,7 +14,9 @@ include $_SERVER['DOCUMENT_ROOT'] .'/configs/db.php';
     }
 }
 
-if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST") {
+if(isset($_POST) && $_SERVER["REQUEST_METHOD"]=="POST" 
+&& $_POST["username"] != "" && $_POST["email"] != "" && $_POST["password"] != "" )
+{
     //registration
     $password = md5($_POST['password']);
 
@@ -30,7 +32,7 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST") {
         mail($_POST['email'], 'Register', $link);
         header('Location: http://real-madrid_fan-shop.local/index.php');
     }
-}
+} else { echo "Your data incorrect"; }
 
 function generateRandomString($Lenght = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwzyxABCDEFGHIJKLMNOPQRSTUVWXYZ';
